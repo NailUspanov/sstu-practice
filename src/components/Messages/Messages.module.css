@@ -1,0 +1,18 @@
+.main {
+   display: flex;
+   color: white;
+}
+
+.leftBar {
+   flex: 1;
+   background-color: rgb(69, 105, 129);
+   color: white;
+   display: flex;
+   flex-direction: column;
+}
+
+.rightBar {
+   color: black;
+   flex: 10;
+   background-color: rgb(186, 222, 247);
+}

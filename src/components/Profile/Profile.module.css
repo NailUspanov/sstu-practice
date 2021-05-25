@@ -1,0 +1,13 @@
+.main {
+   background-color: #3c3765;
+   color: white;
+}
+
+.description {
+   display: flex;
+}
+
+.userName {
+   font-weight: bold;
+   font-size: 1.8em;
+}

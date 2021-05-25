@@ -1,0 +1,28 @@
+
+let messagesInit = {
+        dialogItemsData: [
+            { name: 'Nail', id: 1 },
+            { name: 'Sophya', id: 2 },
+            { name: 'Max', id: 3 },
+            { name: 'Anton', id: 4 }
+        ],
+        messagesData: [
+            {text: 'Hello!', id: 999},
+        ],
+        messageValue: 'q',
+    };
+
+let messagesReducer = (state = messagesInit, action) => {
+    switch (action.type){
+        case 'MESSAGE-VALUE-RENDER':
+            state.messageValue = action.text;
+            return state;
+        case 'ADD-MESSAGE':
+            let newMessage = {text: state.messageValue, id: 0}
+            state.messagesData.push(newMessage);
+            return state;
+        default: return state;
+    }
+}
+
+export default messagesReducer;

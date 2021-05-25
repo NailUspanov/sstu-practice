@@ -1,0 +1,18 @@
+.App {
+  height: 760px;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr 7fr;
+  grid-template-areas:
+    "head head head"
+    "bar cont cont";
+}
+
+.header {
+  background-color: aqua;
+  grid-area: head;
+}
+
+.main-content {
+  grid-area: cont;
+}

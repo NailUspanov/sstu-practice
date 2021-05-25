@@ -1,0 +1,25 @@
+.navbar {
+   background-color: black;
+   grid-area: bar;
+   color: aliceblue;
+}
+
+.navbar a:visited {
+   color: aliceblue;
+}
+
+.navbar a {
+   text-decoration: none;
+}
+
+ul {
+   list-style-type: none;
+}
+
+li {
+   cursor: pointer;
+}
+
+li+li {
+   margin-top: 1em;
+}
