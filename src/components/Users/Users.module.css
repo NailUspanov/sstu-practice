@@ -1,0 +1,14 @@
+img{
+    width: 100px;
+}
+
+.user{
+    display: flex;
+    max-height: 150px;
+    width: 100%;
+}
+
+.main{
+    color: white;
+    background-color: #242526;
+}

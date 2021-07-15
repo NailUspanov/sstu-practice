@@ -1,29 +1,29 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Messages from './components/Messages/Messages';
 import Navbar from './components/Navbar/Navbar';
-import Profile from './components/Profile/Profile';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import {BrowserRouter, Route} from 'react-router-dom';
+import MessagesContainer from "./components/Messages/MessagesContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
+import UsersContainer from "./components/Users/UsersContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 function App(props) {
-  debugger;
   return (
     <BrowserRouter>
       <div className="App">
-
-        <Header />
+        <HeaderContainer />
         <Navbar />
         
-        <Route path="/Profile" render={() => <Profile postsData={props.postsData} dispatch = {props.dispatch} postValue={props.postValue} />} />
-        <Route path= "/Messages" render={()=><Messages pageMessages={props.pageMessages} dispatch = {props.dispatch}/>} />
+        <Route path="/Profile/:userId" render={() => <ProfileContainer />} />
+        <Route path= "/Messages" render={()=> <MessagesContainer />} />
         <Route path= "/Music" component={Music}/>
         <Route path= "/Settings" component={Settings}/>
         <Route path= "/News" component={News}/>
-
-
+        <Route path= "/Users" component={() => <UsersContainer />}/>
+        <Route path= "/login" component={() => <Login />}/>
       </div>
     </BrowserRouter>
   );

@@ -9,10 +9,12 @@
 }
 
 .header {
-  background-color: aqua;
+  background-color: #1c1e21;
   grid-area: head;
+  color: white;
 }
 
 .main-content {
+  background-color: #242526;
   grid-area: cont;
 }
