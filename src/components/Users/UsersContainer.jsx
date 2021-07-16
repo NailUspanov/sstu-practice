@@ -24,8 +24,6 @@ class UsersContainer extends React.Component {
     }
 }
 
-let UsersWithRedirect = withAuthRedirect(UsersContainer)
-
 let mapStateToProps = (state) => {
     return {
         users: state.pageUsers.users,
@@ -45,4 +43,4 @@ export default connect(mapStateToProps, {
     followThunk,
     getUsersThunk,
     setCurrentPage
-})(UsersWithRedirect);
+})(UsersContainer);
